@@ -1,5 +1,5 @@
 {
-  programs.nixvim.highlight = {
+  highlight = {
     Comment.fg = "#ff00ff";
     Comment.bg = "#000000";
     Comment.underline = true;

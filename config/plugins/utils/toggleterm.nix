@@ -10,7 +10,7 @@
         end
       end
     '';
-    openMapping = "<A-i>";
+    # openMapping = "<A-i>";
     hideNumbers = true;
     shadeTerminals = true;
     startInInsert = true;
@@ -18,7 +18,7 @@
     persistMode = true;
     insertMappings = true;
     closeOnExit = true;
-    shell = "zsh";
+    # shell = "zsh";
     direction = "horizontal"; # 'vertical' | 'horizontal' | 'window' | 'float'
     autoScroll = true;
     floatOpts = {

@@ -54,7 +54,7 @@
     };
   };
 
-  programs.nixvim.keymaps = [
+  keymaps = [
     {
       mode = "n";
       key = "<leader>dB";

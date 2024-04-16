@@ -63,7 +63,7 @@
       scrollUp = "<C-b>";
     };
   };
-  programs.nixvim.keymaps = [
+  keymaps = [
     {
       mode = "n";
       key = "gd";

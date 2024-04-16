@@ -1,5 +1,5 @@
 {
-  programs.nixvim.opts = {
+  opts = {
     # Enable relative line numbers
     number = true;
     relativenumber = true;

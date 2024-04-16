@@ -1,5 +1,5 @@
 {
-  programs.nixvim.plugins = {
+  plugins = {
     lualine = {
       enable = true;
       iconsEnabled = true;

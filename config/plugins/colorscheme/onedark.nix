@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  programs.nixvim.colorschemes.onedark = {
+  colorschemes.onedark = {
     enable = true;
     package = pkgs.vimPlugins.onedark-nvim;
   };

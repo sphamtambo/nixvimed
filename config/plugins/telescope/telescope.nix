@@ -1,5 +1,5 @@
 {
-  programs.nixvim.plugins = {
+  plugins = {
     telescope = {
       enable = true;
       extensions = {

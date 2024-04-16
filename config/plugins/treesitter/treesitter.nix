@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  programs.nixvim.plugins.treesitter = {
+  plugins.treesitter = {
     enable = true;
     indent = true;
     folding = true;

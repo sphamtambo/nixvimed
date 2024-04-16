@@ -1,5 +1,5 @@
 {
-  programs.nixvim.plugins.lspsaga = {
+  plugins.lspsaga = {
     enable = true;
     beacon = {
       enable = true;

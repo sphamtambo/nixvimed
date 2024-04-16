@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  programs.nixvim.colorschemes.dracula = {
+  colorschemes.dracula = {
     enable = true;
     package = pkgs.vimPlugins.dracula-nvim;
   };

@@ -1,13 +1,9 @@
 {pkgs, ...}: {
-  programs = {
-    nixvim = {
-      extraPlugins = with pkgs.vimPlugins; [
-        nvim-surround
-      ];
+  extraPlugins = with pkgs.vimPlugins; [
+    nvim-surround
+  ];
 
-      extraConfigLua = ''
-        require("nvim-surround").setup()
-      '';
-    };
-  };
+  extraConfigLua = ''
+    require("nvim-surround").setup()
+  '';
 }

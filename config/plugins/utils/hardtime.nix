@@ -1,5 +1,5 @@
 {
-  programs.nixvim.plugins.hardtime = {
+  plugins.hardtime = {
     enable = true;
     enabled = true;
     disableMouse = true;

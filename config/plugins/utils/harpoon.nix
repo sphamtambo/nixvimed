@@ -1,5 +1,5 @@
 {
-  programs.nixvim.plugins.harpoon = {
+  plugins.harpoon = {
     enable = true;
     enableTelescope = true;
     keymapsSilent = true;

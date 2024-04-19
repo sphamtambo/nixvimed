@@ -2,12 +2,12 @@
   extraPackages = with pkgs; [
     checkstyle
     clippy
+    clang-tools
     commitlint
     eslint_d
     eslint_d
     golangci-lint
     html-tidy
-    llvmPackages_17.clang-unwrapped
     lua53Packages.luacheck
     markdownlint-cli
     nodePackages.jsonlint

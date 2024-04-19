@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   extraPackages = with pkgs; [
-    # llvmPackages_17.clang-unwrapped # installed via lint.nix file
+    # clang-tools
     alejandra
     black
     cmake-format

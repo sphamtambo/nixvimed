@@ -1,4 +1,9 @@
-{
+{pkgs, ...}: {
+  extraPackages = with pkgs; [
+    fzf
+    ripgrep
+  ];
+
   plugins = {
     telescope = {
       enable = true;

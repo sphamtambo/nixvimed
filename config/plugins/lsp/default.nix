@@ -6,6 +6,5 @@
     ++ [(import ./lint.nix)]
     ++ [(import ./lsp.nix)]
     ++ [(import ./lspsaga.nix)]
-    ++ [(import ./none-ls.nix)]
     ++ [(import ./trouble.nix)];
 }

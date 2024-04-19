@@ -1,11 +1,10 @@
 {
   plugins = {
-    lsp-format = {enable = true;};
     lsp = {
       enable = true;
       servers = {
         bashls = {enable = true;};
-        clangd = {enable = true;};
+        # clangd = {enable = true;}; # installed via clang tools
         cmake = {enable = true;};
         csharp-ls = {enable = true;};
         cssls = {enable = true;};

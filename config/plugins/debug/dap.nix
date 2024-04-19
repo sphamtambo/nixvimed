@@ -2,7 +2,7 @@
   extraPackages = with pkgs; [
     asm-lsp
     bashdb
-    clang-tools
+    # clang-tools
     delve
     fd
     gdb

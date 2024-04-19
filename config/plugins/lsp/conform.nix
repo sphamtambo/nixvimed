@@ -1,11 +1,18 @@
 {pkgs, ...}: {
   extraPackages = with pkgs; [
-    nodePackages.prettier
-    prettierd
+    # llvmPackages_17.clang-unwrapped # installed via lint.nix file
     alejandra
     black
-    isort
     cmake-format
+    gofumpt
+    golines
+    google-java-format
+    gotools
+    isort
+    nodePackages.prettier
+    prettierd
+    rustfmt
+    shfmt
     stylua
   ];
   # TODO: Add more formatters
@@ -18,22 +25,25 @@
     };
     notifyOnError = true;
     formattersByFt = {
-      html = [["prettierd" "prettier"]];
+      c = ["clang-format"];
+      cmake = ["cmake_format"];
+      cpp = ["clang-format"];
       css = [["prettierd" "prettier"]];
+      go = [["goimports" "gofumpt" "golines"]];
+      html = [["prettierd" "prettier"]];
+      java = ["google-java-format"];
       javascript = [["prettierd" "prettier"]];
       javascriptreact = [["prettierd" "prettier"]];
-      typescript = [["prettierd" "prettier"]];
-      python = [["isort" "black"]];
-      cpp = ["clang-format"];
-      cmake = ["cmake_format"];
-      lua = ["stylua"];
-      nix = ["alejandra"];
-      markdown = [["prettierd" "prettier"]];
-      yaml = [["prettierd" "prettier"]];
       json = [["prettierd" "prettier"]];
+      lua = ["stylua"];
+      markdown = [["prettierd" "prettier"]];
+      nix = ["alejandra"];
+      python = [["isort" "black"]];
       rust = ["rustfmt"];
-      java = ["google-java-format"];
-      go = [["goimports" "gofmt"]];
+      sh = ["shfmt"];
+      typescript = [["prettierd" "prettier"]];
+      typescriptreact = [["prettierd" "prettier"]];
+      yaml = [["prettierd" "prettier"]];
     };
   };
 

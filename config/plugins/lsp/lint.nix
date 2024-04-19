@@ -1,20 +1,23 @@
 {pkgs, ...}: {
   extraPackages = with pkgs; [
-    llvmPackages_17.clang-unwrapped
-    eslint_d
-    statix
-    eslint_d
-    yamllint
-    nodePackages.jsonlint
-    shellcheck
+    checkstyle
+    clippy
     commitlint
-    lua53Packages.luacheck
-    nodePackages.jsonlint
-    markdownlint-cli
+    eslint_d
+    eslint_d
+    golangci-lint
     html-tidy
-    python311Packages.flake8
+    llvmPackages_17.clang-unwrapped
+    lua53Packages.luacheck
+    markdownlint-cli
+    nodePackages.jsonlint
+    nodePackages.jsonlint
     pylint
+    python311Packages.flake8
     ruff
+    shellcheck
+    statix
+    yamllint
   ];
   # TODO: Add more linters
 
@@ -25,6 +28,9 @@
       cpp = ["clangtidy"];
       css = ["eslint_d"];
       gitcommit = ["commitlint"];
+      go = ["golangcilint"];
+      html = ["html-tidy"];
+      java = ["checkstyle"];
       javascript = ["eslint_d"];
       javascriptreact = ["eslint_d"];
       json = ["jsonlint"];
@@ -32,11 +38,11 @@
       markdownlint = ["markdownlint"];
       nix = ["statix"];
       python = ["flake8"];
+      rust = ["clippy"];
       sh = ["shellcheck"];
       typescript = ["eslint_d"];
       typescriptreact = ["eslint_d"];
       yaml = ["yamllint"];
-      html = ["html-tidy"];
     };
   };
   extraConfigLua = ''

@@ -4,23 +4,24 @@
     lsp = {
       enable = true;
       servers = {
-        html = {enable = true;};
-        tsserver = {enable = true;};
-        cssls = {enable = true;};
-        svelte = {enable = true;};
-        graphql = {enable = true;};
-        emmet_ls = {enable = true;};
-        prismals = {enable = true;};
-        tailwindcss = {enable = true;};
-        lua-ls = {enable = true;};
-        nil_ls = {enable = true;};
-        marksman = {enable = true;};
-        pyright = {enable = true;};
-        ruff-lsp = {enable = true;};
-        hls = {enable = true;};
+        bashls = {enable = true;};
         clangd = {enable = true;};
         cmake = {enable = true;};
         csharp-ls = {enable = true;};
+        cssls = {enable = true;};
+        dockerls = {enable = true;};
+        emmet_ls = {enable = true;};
+        gopls = {enable = true;};
+        graphql = {enable = true;};
+        hls = {enable = true;};
+        html = {enable = true;};
+        jsonls = {enable = true;};
+        lua-ls = {enable = true;};
+        marksman = {enable = true;};
+        nil_ls = {enable = true;};
+        prismals = {enable = true;};
+        pyright = {enable = true;};
+        ruff-lsp = {enable = true;};
         rust-analyzer = {
           enable = true;
           settings = {
@@ -29,12 +30,11 @@
           installCargo = true;
           installRustc = true;
         };
-        bashls = {enable = true;};
-        gopls = {enable = true;};
+        svelte = {enable = true;};
+        tailwindcss = {enable = true;};
         terraformls = {enable = true;};
+        tsserver = {enable = true;};
         yamlls = {enable = true;};
-        jsonls = {enable = true;};
-        dockerls = {enable = true;};
       };
       keymaps = {
         silent = true;

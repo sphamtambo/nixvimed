@@ -2,7 +2,6 @@
   imports = [
     ./keymaps.nix
     ./options.nix
-    ./highlight.nix
     ./globals.nix
 
     ./plugins/colorscheme

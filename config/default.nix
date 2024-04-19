@@ -8,13 +8,15 @@
     ./plugins/colorscheme
     ./plugins/completion
     ./plugins/debug
-    ./plugins/filetrees
+    ./plugins/file-explorer
     ./plugins/git
     ./plugins/lsp
     ./plugins/snippets
     ./plugins/statusline
-    ./plugins/telescope
-    ./plugins/treesitter
+    ./plugins/fuzzyfinder
+    ./plugins/syntax
+    ./plugins/terminal
+    ./plugins/test
     ./plugins/ui
     ./plugins/utils
   ];

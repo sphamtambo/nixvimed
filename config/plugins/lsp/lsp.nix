@@ -5,16 +5,33 @@
       enable = true;
       servers = {
         html = {enable = true;};
+        tsserver = {enable = true;};
+        cssls = {enable = true;};
+        svelte = {enable = true;};
+        graphql = {enable = true;};
+        emmet_ls = {enable = true;};
+        prismals = {enable = true;};
+        tailwindcss = {enable = true;};
         lua-ls = {enable = true;};
         nil_ls = {enable = true;};
         marksman = {enable = true;};
         pyright = {enable = true;};
         ruff-lsp = {enable = true;};
+        hls = {enable = true;};
         clangd = {enable = true;};
+        cmake = {enable = true;};
+        csharp-ls = {enable = true;};
+        rust-analyzer = {
+          enable = true;
+          settings = {
+            diagnostics.enable = true;
+          };
+          installCargo = true;
+          installRustc = true;
+        };
         bashls = {enable = true;};
         gopls = {enable = true;};
         terraformls = {enable = true;};
-        tsserver = {enable = true;};
         yamlls = {enable = true;};
         jsonls = {enable = true;};
         dockerls = {enable = true;};
@@ -102,5 +119,13 @@
     require('lspconfig.ui.windows').default_options = {
       border = _border
     }
+
+    local lspconfig = require("lspconfig")
+    -- Change the Diagnostic symbols in the sign column (gutter)
+    local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
+    for type, icon in pairs(signs) do
+      local hl = "DiagnosticSign" .. type
+      vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+    end
   '';
 }

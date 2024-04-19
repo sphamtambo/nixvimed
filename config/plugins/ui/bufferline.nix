@@ -4,9 +4,10 @@
     separatorStyle = "thin"; # “slant”, “padded_slant”, “slope”, “padded_slope”, “thick”, “thin”
     offsets = [
       {
-        filetype = "NvimTree";
-        text = "File Explorer";
+        filetype = "neo-tree";
+        text = "Neo-tree";
         text_align = "left";
+        highlight = "Directory";
       }
     ];
     indicator.icon = "▎";

@@ -16,6 +16,7 @@
     pylint
     ruff
   ];
+  # TODO: Add more linters
 
   plugins.lint = {
     enable = true;

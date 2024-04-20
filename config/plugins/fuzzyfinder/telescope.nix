@@ -1,8 +1,8 @@
 {pkgs, ...}: {
-  # extraPackages = with pkgs; [
-  #   fzf
-  #   ripgrep
-  # ];
+  extraPackages = with pkgs; [
+    fzf
+    ripgrep
+  ];
 
   plugins = {
     telescope = {

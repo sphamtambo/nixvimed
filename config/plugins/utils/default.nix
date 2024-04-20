@@ -11,7 +11,6 @@
     ++ [(import ./nvim-autopairs.nix)]
     ++ [(import ./nvim-surround.nix)]
     ++ [(import ./nvim-web-devicons.nix)]
-    ++ [(import ./oil.nix)]
     ++ [(import ./plenary.nix)]
     ++ [(import ./tmx-navigator.nix)]
     ++ [(import ./todo-comments.nix)]

@@ -1,18 +1,10 @@
 {pkgs, ...}: {
   extraPackages = with pkgs; [
-    asm-lsp
-    bashdb
-    # clang-tools
-    delve
-    fd
-    gdb
+    # bashdb
+    # delve
+    # fd
     lldb_17
-    llvmPackages_17.bintools-unwrapped
-    marksman
-  ];
-
-  extraPlugins = with pkgs.vimPlugins; [
-    nvim-dap
+    # marksman
   ];
 
   plugins.dap = {
@@ -42,6 +34,7 @@
         texthl = "DapLogPoint";
       };
     };
+    adapters.executables.lldb.command = "lldb-vscode";
     configurations = {
       java = [
         {
@@ -56,38 +49,56 @@
   };
 
   extraConfigLua = ''
-       local dap, dapui = require("dap"), require("dapui")
-    dap.listeners.before.attach.dapui_config = function()
-    	dapui.open()
-    end
-    dap.listeners.before.launch.dapui_config = function()
-    	dapui.open()
-    end
-    dap.listeners.before.event_terminated.dapui_config = function()
-    	dapui.close()
-    end
-    dap.listeners.before.event_exited.dapui_config = function()
-    	dapui.close()
-      end
-    local dap = require("dap")
-    dap.adapters.lldb = {
-       type = 'executable',
-       command = '${pkgs.lldb}/bin/lldb-vscode',
-       name = 'lldb'
+
+    local dap = require('dap')
+    dap.set_log_level('DEBUG')
+
+    dap.configurations.cpp = {
+     {
+       name = "Launch",
+       type = "lldb",
+       request = "launch",
+       program = function()
+         return vim.fn.input('Path of the executable: ', vim.fn.getcwd() .. '/', 'file')
+       end,
+       cwd = "''${workspaceFolder}",
+     },
     }
 
-    dap.configurations.cpp= {
-       {
-          name = 'Launch',
-          type = 'lldb',
-          request = 'launch',
-          program = function()
-          return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
-          end,
-          cwd = "''${workspaceFolder}",
-          stopOnEntry = false,
-          args = {},
-       },
+    dap.configurations.c= {
+     {
+       name = "Launch",
+       type = "lldb",
+       request = "launch",
+       program = function()
+         return vim.fn.input('Path of the executable: ', vim.fn.getcwd() .. '/', 'file')
+       end,
+       cwd = "''${workspaceFolder}",
+     },
+    }
+
+    dap.configurations.rust = {
+     {
+       name = "Launch",
+       type = "lldb",
+       request = "launch",
+       program = function()
+         return vim.fn.input('Path of the executable: ', vim.fn.getcwd() .. '/', 'file')
+       end,
+       cwd = "''${workspaceFolder}",
+     },
+    }
+
+    dap.configurations.zig = {
+     {
+       name = "Launch",
+       type = "lldb",
+       request = "launch",
+       program = function()
+         return vim.fn.input('Path of the executable: ', vim.fn.getcwd() .. '/', 'file')
+       end,
+       cwd = "''${workspaceFolder}",
+     },
     }
   '';
 

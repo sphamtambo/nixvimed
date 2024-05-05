@@ -23,17 +23,19 @@
         ruff-lsp = {enable = true;};
         rust-analyzer = {
           enable = true;
-          settings = {
-            diagnostics.enable = true;
-          };
+          # settings = {
+          #   diagnostics.enable = true;
+          # };
           installCargo = true;
           installRustc = true;
         };
         svelte = {enable = true;};
         tailwindcss = {enable = true;};
+        taplo = {enable = true;};
         terraformls = {enable = true;};
         tsserver = {enable = true;};
         yamlls = {enable = true;};
+        zls = {enable = true;};
       };
       keymaps = {
         silent = true;

@@ -14,6 +14,7 @@
     rustfmt
     shfmt
     stylua
+    taplo
   ];
   # TODO: Add more formatters
 
@@ -41,6 +42,7 @@
       python = [["isort" "black"]];
       rust = ["rustfmt"];
       sh = ["shfmt"];
+      toml = ["taplo"];
       typescript = [["prettierd" "prettier"]];
       typescriptreact = [["prettierd" "prettier"]];
       yaml = [["prettierd" "prettier"]];

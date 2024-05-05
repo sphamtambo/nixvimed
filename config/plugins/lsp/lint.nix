@@ -7,10 +7,10 @@
     eslint_d
     eslint_d
     golangci-lint
+    haskellPackages.tomlcheck
     html-tidy
     lua53Packages.luacheck
     markdownlint-cli
-    nodePackages.jsonlint
     nodePackages.jsonlint
     pylint
     python311Packages.flake8
@@ -40,6 +40,7 @@
       python = ["flake8"];
       rust = ["clippy"];
       sh = ["shellcheck"];
+      toml = ["tomlcheck"];
       typescript = ["eslint_d"];
       typescriptreact = ["eslint_d"];
       yaml = ["yamllint"];

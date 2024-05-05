@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   extraPackages = with pkgs; [
     # bashdb
-    # delve
+    delve
     # fd
     lldb_17
     # marksman

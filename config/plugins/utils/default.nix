@@ -1,7 +1,7 @@
 {...}: {
   imports =
     [(import ./comment-nvim.nix)]
-    # ++ [(import ./copilot.nix)]
+    ++ [(import ./codeium.nix)]
     ++ [(import ./flash.nix)]
     ++ [(import ./grapple.nix)]
     ++ [(import ./hardtime.nix)]

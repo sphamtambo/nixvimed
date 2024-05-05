@@ -7,7 +7,7 @@
     eslint_d
     eslint_d
     golangci-lint
-    haskellPackages.tomlcheck
+    # haskellPackages.tomlcheck
     html-tidy
     lua53Packages.luacheck
     markdownlint-cli
@@ -38,9 +38,9 @@
       markdownlint = ["markdownlint"];
       nix = ["statix"];
       python = ["flake8"];
-      rust = ["clippy"];
+      # rust = ["clippy"];
       sh = ["shellcheck"];
-      toml = ["tomlcheck"];
+      # toml = ["tomlcheck"];
       typescript = ["eslint_d"];
       typescriptreact = ["eslint_d"];
       yaml = ["yamllint"];

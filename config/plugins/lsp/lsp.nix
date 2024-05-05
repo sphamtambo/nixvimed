@@ -23,9 +23,6 @@
         ruff-lsp = {enable = true;};
         rust-analyzer = {
           enable = true;
-          # settings = {
-          #   diagnostics.enable = true;
-          # };
           installCargo = true;
           installRustc = true;
         };

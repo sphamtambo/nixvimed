@@ -38,7 +38,7 @@
       markdownlint = ["markdownlint"];
       nix = ["statix"];
       python = ["flake8"];
-      rust = ["clippy"];
+      # rust = ["clippy"];
       sh = ["shellcheck"];
       # toml = ["tomlcheck"];
       typescript = ["eslint_d"];

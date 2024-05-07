@@ -25,6 +25,12 @@
           enable = true;
           installCargo = true;
           installRustc = true;
+          settings = {
+            checkOnSave = true;
+            check = {
+              command = "clippy";
+            };
+          };
         };
         svelte = {enable = true;};
         tailwindcss = {enable = true;};

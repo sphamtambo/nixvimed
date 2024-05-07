@@ -36,25 +36,25 @@
             };
           };
         };
-        # pickers = {
-        #   buffers = {
-        #     # sort_lastused = true;
-        #     previewer = false;
-        #
-        #     layout_config = {
-        #       width = 0.3;
-        #       height = 0.4;
-        #     };
-        #     mappings = {
-        #       "i" = {
-        #         "<C-D>" = "delete_buffer";
-        #       };
-        #       "n" = {
-        #         "dd" = "delete_buffer";
-        #       };
-        #     };
-        #   };
-        # };
+        pickers = {
+          buffers = {
+            # sort_lastused = true;
+            previewer = false;
+
+            layout_config = {
+              width = 0.3;
+              height = 0.4;
+            };
+            mappings = {
+              "i" = {
+                "<C-D>" = "delete_buffer";
+              };
+              "n" = {
+                "dd" = "delete_buffer";
+              };
+            };
+          };
+        };
       };
       keymaps = {
         "<leader><space>" = {
@@ -179,6 +179,14 @@
       action = "<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>";
       options = {
         desc = "File browser";
+      };
+    }
+        {
+      mode = "n";
+      key = "<leader>fp";
+      action = "<cmd>Telescope projects<CR>";
+      options = {
+        desc = "Projects";
       };
     }
   ];

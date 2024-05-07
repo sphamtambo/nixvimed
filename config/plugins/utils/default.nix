@@ -12,6 +12,8 @@
     ++ [(import ./nvim-surround.nix)]
     ++ [(import ./nvim-web-devicons.nix)]
     ++ [(import ./plenary.nix)]
+    ++ [(import ./project.nix)]
+    ++ [(import ./persistence.nix)]
     ++ [(import ./tmx-navigator.nix)]
     ++ [(import ./todo-comments.nix)]
     ++ [(import ./ufo.nix)]

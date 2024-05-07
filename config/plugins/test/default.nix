@@ -1,3 +1,5 @@
 {...}: {
-  # imports = [(import ./neotest.nix)];
+  imports =
+    [(import ./neotest.nix)]
+    ++ [(import ./neodev.nix)];
 }

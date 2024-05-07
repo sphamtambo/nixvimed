@@ -1,31 +1,33 @@
 {pkgs, ...}: {
-  # extraPackages = with pkgs; [
-  #   checkstyle
-  #   clippy
-  #   clang-tools
-  #   commitlint
-  #   eslint_d
-  #   eslint_d
-  #   golangci-lint
-  #   # haskellPackages.tomlcheck
-  #   html-tidy
-  #   lua53Packages.luacheck
-  #   markdownlint-cli
-  #   nodePackages.jsonlint
-  #   pylint
-  #   python311Packages.flake8
-  #   ruff
-  #   shellcheck
-  #   statix
-  #   yamllint
-  # ];
+  extraPackages = with pkgs; [
+    checkstyle
+    clippy
+    # clang-tools
+    # clang-tools_18
+    # llvmPackages_17.clang-unwrapped
+    commitlint
+    eslint_d
+    eslint_d
+    golangci-lint
+    # haskellPackages.tomlcheck
+    html-tidy
+    lua53Packages.luacheck
+    markdownlint-cli
+    nodePackages.jsonlint
+    pylint
+    python311Packages.flake8
+    ruff
+    shellcheck
+    statix
+    yamllint
+  ];
   # TODO: Add more linters
 
   plugins.lint = {
     enable = true;
     lintersByFt = {
-      c = ["clangtidy"];
-      cpp = ["clangtidy"];
+      # c = ["clangtidy"];
+      # cpp = ["clangtidy"];
       css = ["eslint_d"];
       gitcommit = ["commitlint"];
       go = ["golangcilint"];

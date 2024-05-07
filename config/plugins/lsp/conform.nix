@@ -1,21 +1,21 @@
 {pkgs, ...}: {
-  # extraPackages = with pkgs; [
-  #   # clang-tools
-  #   alejandra
-  #   black
-  #   cmake-format
-  #   gofumpt
-  #   golines
-  #   google-java-format
-  #   gotools
-  #   isort
-  #   nodePackages.prettier
-  #   prettierd
-  #   rustfmt
-  #   shfmt
-  #   stylua
-  #   taplo
-  # ];
+  extraPackages = with pkgs; [
+    # clang-tools
+    alejandra
+    black
+    cmake-format
+    gofumpt
+    golines
+    google-java-format
+    gotools
+    isort
+    nodePackages.prettier
+    prettierd
+    rustfmt
+    shfmt
+    stylua
+    taplo
+  ];
   # TODO: Add more formatters
 
   plugins.conform-nvim = {
@@ -26,9 +26,9 @@
     };
     notifyOnError = true;
     formattersByFt = {
-      c = ["clang-format"];
+      # c = ["clang-format"];
       cmake = ["cmake_format"];
-      cpp = ["clang-format"];
+      # cpp = ["clang-format"];
       css = [["prettierd" "prettier"]];
       go = [["goimports" "gofumpt" "golines"]];
       html = [["prettierd" "prettier"]];

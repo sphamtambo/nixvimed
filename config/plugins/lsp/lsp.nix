@@ -1,7 +1,11 @@
 {
   plugins = {
+    lsp-format = {
+      enable = false; # Enable it if you want lsp-format integration for none-ls
+    };
     lsp = {
       enable = true;
+      capabilities = "offsetEncoding =  'utf-16'";
       servers = {
         bashls = {enable = true;};
         clangd = {enable = true;}; # installed via clang tools

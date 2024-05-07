@@ -36,25 +36,25 @@
             };
           };
         };
-        # pickers = {
-        #   buffers = {
-        #     # sort_lastused = true;
-        #     previewer = false;
-        #
-        #     layout_config = {
-        #       width = 0.3;
-        #       height = 0.4;
-        #     };
-        #     mappings = {
-        #       "i" = {
-        #         "<C-D>" = "delete_buffer";
-        #       };
-        #       "n" = {
-        #         "dd" = "delete_buffer";
-        #       };
-        #     };
-        #   };
-        # };
+        pickers = {
+          buffers = {
+            # sort_lastused = true;
+            previewer = false;
+
+            layout_config = {
+              width = 0.3;
+              height = 0.4;
+            };
+            mappings = {
+              "i" = {
+                "<C-D>" = "delete_buffer";
+              };
+              "n" = {
+                "dd" = "delete_buffer";
+              };
+            };
+          };
+        };
       };
       keymaps = {
         "<leader><space>" = {

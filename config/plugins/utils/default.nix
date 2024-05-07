@@ -3,7 +3,7 @@
     [(import ./comment-nvim.nix)]
     # ++ [(import ./codeium.nix)]
     ++ [(import ./flash.nix)]
-    ++ [(import ./grapple.nix)]
+    # ++ [(import ./grapple.nix)]
     ++ [(import ./hardtime.nix)]
     ++ [(import ./harpoon.nix)]
     ++ [(import ./illuminate.nix)]

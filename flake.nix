@@ -4,10 +4,10 @@
   inputs = {
     nixvim.url = "github:nix-community/nixvim";
     flake-utils.url = "github:numtide/flake-utils";
-    nixpkgs = {
-      url = "github:nixos/nixpkgs";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # nixpkgs = {
+    #   url = "github:nixos/nixpkgs";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 
   outputs = {
@@ -21,13 +21,14 @@
   in
     flake-utils.lib.eachDefaultSystem (system: let
       nixvimLib = nixvim.lib.${system};
-      pkgs = import nixpkgs {
-        inherit system;
-        config = {
-          allowBroken = true;
-          allowUnfree = true;
-        };
-      };
+      pkgs = import nixpkgs {inherit system;};
+      # pkgs = import nixpkgs {
+      #   inherit system;
+      #   config = {
+      #     allowBroken = true;
+      #     allowUnfree = true;
+      #   };
+      # };
       nixvim' = nixvim.legacyPackages.${system};
       nvim = nixvim'.makeNixvimWithModule {
         inherit pkgs;

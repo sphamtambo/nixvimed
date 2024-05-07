@@ -26,6 +26,10 @@
           installCargo = true;
           installRustc = true;
           settings = {
+            cargo.features = "all";
+            procMacro = {
+              enable = true;
+            };
             checkOnSave = true;
             check = {
               command = "clippy";

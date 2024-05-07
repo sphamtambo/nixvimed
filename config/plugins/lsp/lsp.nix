@@ -4,7 +4,7 @@
       enable = true;
       servers = {
         bashls = {enable = true;};
-        # clangd = {enable = true;}; # installed via clang tools
+        clangd = {enable = true;}; # installed via clang tools
         cmake = {enable = true;};
         csharp-ls = {enable = true;};
         cssls = {enable = true;};
@@ -26,7 +26,7 @@
           installCargo = true;
           installRustc = true;
           settings = {
-            # cargo.features = "all";
+            cargo.features = "all";
             procMacro = {
               enable = true;
             };

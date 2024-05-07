@@ -1,21 +1,21 @@
 {pkgs, ...}: {
-  extraPackages = with pkgs; [
-    # clang-tools
-    alejandra
-    black
-    cmake-format
-    gofumpt
-    golines
-    google-java-format
-    gotools
-    isort
-    nodePackages.prettier
-    prettierd
-    rustfmt
-    shfmt
-    stylua
-    taplo
-  ];
+  # extraPackages = with pkgs; [
+  #   # clang-tools
+  #   alejandra
+  #   black
+  #   cmake-format
+  #   gofumpt
+  #   golines
+  #   google-java-format
+  #   gotools
+  #   isort
+  #   nodePackages.prettier
+  #   prettierd
+  #   rustfmt
+  #   shfmt
+  #   stylua
+  #   taplo
+  # ];
   # TODO: Add more formatters
 
   plugins.conform-nvim = {

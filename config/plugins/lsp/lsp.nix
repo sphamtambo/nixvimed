@@ -26,7 +26,7 @@
           installCargo = true;
           installRustc = true;
           settings = {
-            cargo.features = "all";
+            # cargo.features = "all";
             procMacro = {
               enable = true;
             };

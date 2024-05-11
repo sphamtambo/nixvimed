@@ -224,7 +224,7 @@
     {
       mode = "v";
       key = "K";
-      action = ":m '>-2<CR>gv=gv";
+      action = ":m '<-2<CR>gv=gv";
       options = {desc = "Use move command when line is highlighted ";};
     }
 
@@ -391,14 +391,14 @@
 
     {
       mode = "n";
-      key = "<leader>rc";
+      key = "<leader>r";
       action = ":%s///g<Left><Left>";
       options = {desc = "Replace all instances of a word in a file";};
     }
 
     {
       mode = "n";
-      key = "<leader>r";
+      key = "<leader>rc";
       action = ":%s///gc<Left><Left><Left>";
       options = {desc = "Replace all instances of a word in a file, c to
         confirm individually";};
@@ -406,14 +406,14 @@
 
     {
       mode = "v";
-      key = "<leader>rc";
+      key = "<leader>r";
       action = ":%s///g<Left><Left>";
       options = {desc = "Replace all instances of a word in a file";};
     }
 
     {
       mode = "n";
-      key = "<leader>r";
+      key = "<leader>rc";
       action = ":%s///gc<Left><Left><Left>";
       options = {desc = "Replace all instances of a word in a file, c to
         confirm individually";};

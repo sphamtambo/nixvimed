@@ -6,6 +6,7 @@
       open_mapping = "[[<c-\>]]"; # clr backslash
       hideNumbers = true;
       shadeTerminals = true;
+      shading_factor = 2;
       startInInsert = true;
       terminalMappings = true;
       persistMode = true;
@@ -13,20 +14,12 @@
       closeOnExit = true;
       direction = "horizontal";
       autoScroll = true;
-      shel = "vim.o.shell";
+      shell = "zsh";
       floatOpts = {
-        border = "single";
+        border = "curved";
         width = 80;
         height = 20;
         winblend = 0;
-      };
-      winbar = {
-        enabled = true;
-        name_formatter = ''
-          function(term)
-            return term.name
-          end
-        '';
       };
     };
   };

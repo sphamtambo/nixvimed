@@ -40,6 +40,7 @@
           };
         };
         svelte = {enable = true;};
+        # sqls = {enable = true;};
         tailwindcss = {enable = true;};
         taplo = {enable = true;};
         terraformls = {enable = true;};

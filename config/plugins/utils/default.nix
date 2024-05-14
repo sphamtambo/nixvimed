@@ -2,6 +2,7 @@
   imports =
     [(import ./comment-nvim.nix)]
     # ++ [(import ./codeium.nix)]
+    ++ [(import ./dadbod.nix)]
     ++ [(import ./flash.nix)]
     # ++ [(import ./grapple.nix)]
     ++ [(import ./hardtime.nix)]

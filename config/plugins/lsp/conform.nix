@@ -1,6 +1,5 @@
 {pkgs, ...}: {
   extraPackages = with pkgs; [
-    # clang-tools
     alejandra
     black
     cmake-format

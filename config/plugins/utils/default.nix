@@ -10,6 +10,7 @@
     ++ [(import ./illuminate.nix)]
     ++ [(import ./markdown-preview.nix)]
     ++ [(import ./nvim-autopairs.nix)]
+    ++ [(import ./nvim-dbee.nix)]
     ++ [(import ./nvim-surround.nix)]
     ++ [(import ./nvim-web-devicons.nix)]
     ++ [(import ./plenary.nix)]

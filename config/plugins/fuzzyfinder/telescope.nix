@@ -35,6 +35,7 @@
               "<C-k>" = "move_selection_previous";
             };
           };
+          # clr u/d to move up and down on preveiw window
         };
         pickers = {
           buffers = {

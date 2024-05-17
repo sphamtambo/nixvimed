@@ -17,6 +17,7 @@
         graphql = {enable = true;};
         hls = {enable = true;};
         html = {enable = true;};
+        java-language-server = {enable = true;};
         jsonls = {enable = true;};
         lua-ls = {enable = true;};
         marksman = {enable = true;};

@@ -29,7 +29,7 @@
       cmake = ["cmake_format"];
       cpp = ["clang-format"];
       css = [["prettierd" "prettier"]];
-      go = [["goimports" "gofumpt" "golines"]];
+      go = ["goimports" "gofumpt" "golines"];
       html = [["prettierd" "prettier"]];
       java = ["google-java-format"];
       javascript = [["prettierd" "prettier"]];

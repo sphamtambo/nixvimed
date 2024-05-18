@@ -92,15 +92,6 @@
       },
     }
 
-    dap.configurations.java = {
-      {
-        type = 'java';
-        request = 'attach';
-        name = "Debug (Attach) - Remote";
-        hostName = "0.0.0.0";
-        port = 5005;
-      },
-    }
 
   '';
 

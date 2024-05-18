@@ -18,10 +18,6 @@
     FixCursorHold-nvim #neotest dependency
   ];
 
-  extraPackages = with pkgs; [
-    cargo-nextest
-  ];
-
   keymaps = [
     {
       mode = "n";

@@ -30,7 +30,7 @@
       action = ":CMakeGenerate<cr>";
       options = {
         silent = true;
-        desc = "configure and generate build system";
+        desc = "Cmake generate build system";
       };
     }
 
@@ -40,7 +40,7 @@
       action = ":CMakeBuild<cr>";
       options = {
         silent = true;
-        desc = "compile/link targets";
+        desc = "Cmake compile/link targets";
       };
     }
 
@@ -50,7 +50,7 @@
       action = ":CMakeRun<cr>";
       options = {
         silent = true;
-        desc = "run luanch-able target";
+        desc = "Cmake run target";
       };
     }
 
@@ -60,7 +60,7 @@
       action = ":CMakeClose<cr>";
       options = {
         silent = true;
-        desc = "close cmake runner/executor window";
+        desc = "Cmake close runner/executor";
       };
     }
 
@@ -70,27 +70,27 @@
       action = ":CMakeClean<cr>";
       options = {
         silent = true;
-        desc = "clean all targets, intermediates, deps";
+        desc = "Cmake clean";
       };
     }
 
     {
       mode = "";
-      key = "<leader>cp";
+      key = "<leader>dm";
       action = ":CMakeDebug<cr>";
       options = {
         silent = true;
-        desc = "debug selected luanch-able target";
+        desc = "Cmake debug";
       };
     }
 
     {
       mode = "";
-      key = "<leader>ct";
+      key = "<leader>tc";
       action = ":CMakeRunTest<cr>";
       options = {
         silent = true;
-        desc = "run ctest";
+        desc = "Cmake run ctest";
       };
     }
   ];

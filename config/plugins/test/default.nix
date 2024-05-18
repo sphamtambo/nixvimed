@@ -1,5 +1,7 @@
 {...}: {
   imports =
-    [(import ./neotest.nix)]
-    ++ [(import ./neodev.nix)];
+    [(import ./cargo-nextest.nix)]
+    ++ [(import ./neodev.nix)]
+    ++ [(import ./neotest.nix)]
+    ++ [(import ./vim-gtest.nix)];
 }

@@ -3,11 +3,15 @@
     cmake-tools-nvim
   ];
 
+  extraPackages = with pkgs; [
+    cmake
+  ];
+
   extraConfigLua = ''
     require("cmake-tools").setup {
     cmake_command = "cmake", -- this is used to specify cmake command path
     ctest_command = "ctest", -- this is used to specify ctest command path
-    cmake_build_directory = "build",
+    cmake_build_directory = "build/${variant:buildType}",
     cmake_build_options = { "-j4" },
     cmake_generate_options = { "-D", "CMAKE_EXPORT_COMPILE_COMMANDS=1" },
     cmake_console_size = 10, -- cmake output window height

@@ -2,8 +2,9 @@
   extraPackages = with pkgs; [
     # bashdb
     # fd
-    # lldb_17
+    lldb_17
     # marksman
+    netcoredbg
   ];
   # FIX: fix c#, java dap
 
@@ -38,7 +39,6 @@
       };
     };
     # adapters.executables.lldb.command = "lldb-vscode";
-    # adapters.executables.coreclr.command = "netcoredbg";
   };
 
   extraConfigLua = ''
@@ -48,14 +48,16 @@
 
     dap.adapters.lldb = {
       type = 'executable',
-      command = '${pkgs.lldb}/bin/lldb-vscode',
+      -- command = '${pkgs.lldb}/bin/lldb-vscode',
+      command = 'lldb-vscode',
       name = 'lldb'
     }
 
     dap.adapters.coreclr = {
       type = 'executable',
-      command = '${pkgs.netcoredbg}/bin/coreclr',
-      name = 'coreclr'
+      command = 'netcoredbg',
+      name = 'coreclr',
+      args = {'--interpreter=vdcode'},
     }
 
     dap.configurations.cpp = {
@@ -79,7 +81,7 @@
     dap.configurations.cs = {
       {
         type = "coreclr",
-        name = "launch",
+        name = "launch - netcoredbg",
         request = "launch",
         program = function()
           return vim.fn.input("Path to the executable: ", vim.fn.getcwd() .. "/bin/Debug/", "file")

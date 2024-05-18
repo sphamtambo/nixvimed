@@ -34,7 +34,7 @@
       action = ":CMakeGenerate<cr>";
       options = {
         silent = true;
-        desc = "Cmake generate build system";
+        desc = "Cmake generate";
       };
     }
 
@@ -44,7 +44,7 @@
       action = ":CMakeBuild<cr>";
       options = {
         silent = true;
-        desc = "Cmake compile/link targets";
+        desc = "Cmake build";
       };
     }
 
@@ -54,7 +54,7 @@
       action = ":CMakeRun<cr>";
       options = {
         silent = true;
-        desc = "Cmake run target";
+        desc = "Cmake run";
       };
     }
 
@@ -64,7 +64,7 @@
       action = ":CMakeClose<cr>";
       options = {
         silent = true;
-        desc = "Cmake close runner/executor";
+        desc = "Cmake close runner";
       };
     }
 
@@ -74,7 +74,7 @@
       action = ":CMakeClean<cr>";
       options = {
         silent = true;
-        desc = "Cmake clean";
+        desc = "Cmake clean target";
       };
     }
 

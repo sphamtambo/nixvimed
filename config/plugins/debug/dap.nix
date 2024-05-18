@@ -5,6 +5,7 @@
     # lldb_17
     # marksman
   ];
+  # FIX: fix c#, java dap
 
   plugins.dap = {
     enable = true;
@@ -86,6 +87,16 @@
        cwd = "''${workspaceFolder}",
        stopOnEntry = false,
        args = {},
+      },
+    }
+
+    dap.configurations.java = {
+      {
+        type = 'java';
+        request = 'attach';
+        name = "Debug (Attach) - Remote";
+        hostName = "0.0.0.0";
+        port = 5005;
       },
     }
 

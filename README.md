@@ -69,6 +69,17 @@ Via NixOS;
 }
 ```
 
+As an Overlay
+
+```
+{inputs, ...}: {
+  overlays = final: prev: {
+    neovim = inputs.nixvimed.packages.${prev.system}.default;
+  };
+}
+
+```
+
 #### Method 2
 
 Alternatively you can run `nixvimed` via the following command:

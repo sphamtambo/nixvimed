@@ -1,12 +1,9 @@
 {pkgs, ...}: {
   extraPackages = with pkgs; [
-    # bashdb
-    # fd
     lldb_17
-    # marksman
     netcoredbg
   ];
-  # FIX: fix c#, java dap
+  # FIX: fix c# dap
 
   plugins.dap = {
     enable = true;
@@ -41,6 +38,7 @@
     # adapters.executables.lldb.command = "lldb-vscode";
   };
 
+  # TODO: use codelldb adapter to activate cmake dap config
   extraConfigLua = ''
 
     local dap = require('dap')
@@ -55,6 +53,7 @@
 
     dap.adapters.coreclr = {
       type = 'executable',
+      -- command = '${pkgs.netcoredbg}/bin/netcoredbg',
       command = 'netcoredbg',
       name = 'coreclr',
       args = {'--interpreter=vdcode'},
@@ -66,9 +65,12 @@
        type = "lldb",
        request = "launch",
        program = function()
-         return vim.fn.input('Path of the executable: ', vim.fn.getcwd() .. '/', 'file')
+         -- return vim.fn.input('Path of the executable: ', vim.fn.getcwd() .. '/', 'file')
+          return vim.fn.input('program: ', vim.loop.cwd() .. '/' .. vim.fn.expand('%f'), 'file')
        end,
        cwd = "''${workspaceFolder}",
+       terminal = 'integrated',
+       console = 'integratedTerminal',
        stopOnEntry = false,
        args = {},
      },

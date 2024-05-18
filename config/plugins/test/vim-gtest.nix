@@ -11,6 +11,7 @@
     })
   ];
 
+  # FIX: fix an error when running vim-gtest
   extraConfigLua = ''
     vim.g['gtest#gtest_command'] = '../Debug/tests'
   '';

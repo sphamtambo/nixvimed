@@ -8,9 +8,9 @@
     incrementalSelection = {
       enable = true;
       keymaps = {
-        initSelection = "<C-space>";
-        nodeIncremental = "<C-space>";
-        nodeDecremental = "<bs>";
+        initSelection = {key = "<C-space>";};
+        nodeIncremental = {key = "<C-space>";};
+        nodeDecremental = {key = "<bs>";};
       };
     };
   };

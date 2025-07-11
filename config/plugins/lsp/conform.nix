@@ -15,36 +15,39 @@
     stylua
     taplo
   ];
-  # TODO: Add more formatters
 
   plugins.conform-nvim = {
     enable = true;
-    format_on_save = {
-      lspFallback = true;
-      timeoutMs = 500;
-    };
-    notifyOnError = true;
-    formattersByFt = {
-      c = ["clang-format"];
-      cmake = ["cmake_format"];
-      cpp = ["clang-format"];
-      css = [["prettierd" "prettier"]];
-      go = ["goimports" "gofumpt" "golines"];
-      html = [["prettierd" "prettier"]];
-      java = ["google-java-format"];
-      javascript = [["prettierd" "prettier"]];
-      javascriptreact = [["prettierd" "prettier"]];
-      json = [["prettierd" "prettier"]];
-      lua = ["stylua"];
-      markdown = [["prettierd" "prettier"]];
-      nix = ["alejandra"];
-      python = [["isort" "black"]];
-      rust = ["rustfmt"];
-      sh = ["shfmt"];
-      toml = ["taplo"];
-      typescript = [["prettierd" "prettier"]];
-      typescriptreact = [["prettierd" "prettier"]];
-      yaml = [["prettierd" "prettier"]];
+
+    settings = {
+      default_format_options = {
+        lsp_format = "fallback";
+      };
+
+      notify_on_error = true;
+
+      formatters_by_ft = {
+        c = ["clang-format"];
+        cmake = ["cmake_format"];
+        cpp = ["clang-format"];
+        css = [["prettierd" "prettier"]];
+        go = ["goimports" "gofumpt" "golines"];
+        html = [["prettierd" "prettier"]];
+        java = ["google-java-format"];
+        javascript = [["prettierd" "prettier"]];
+        javascriptreact = [["prettierd" "prettier"]];
+        json = [["prettierd" "prettier"]];
+        lua = ["stylua"];
+        markdown = [["prettierd" "prettier"]];
+        nix = ["alejandra"];
+        python = [["isort" "black"]];
+        rust = ["rustfmt"];
+        sh = ["shfmt"];
+        toml = ["taplo"];
+        typescript = [["prettierd" "prettier"]];
+        typescriptreact = [["prettierd" "prettier"]];
+        yaml = [["prettierd" "prettier"]];
+      };
     };
   };
 
@@ -67,7 +70,6 @@
         desc = "Format Buffer";
       };
     }
-
     {
       mode = "v";
       key = "<leader>cF";

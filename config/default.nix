@@ -9,13 +9,13 @@
     ./plugins/debug
     ./plugins/file-explorer
     ./plugins/git
-    # ./plugins/lsp
+    ./plugins/lsp
     ./plugins/snippets
     ./plugins/statusline
     ./plugins/fuzzyfinder
     ./plugins/syntax
     ./plugins/terminal
-    ./plugins/test
+    # ./plugins/test
     ./plugins/ui
     ./plugins/utils
   ];

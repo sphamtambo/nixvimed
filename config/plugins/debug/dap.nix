@@ -5,22 +5,11 @@
   ];
   # FIX: fix c# dap
 
+  # Explicitly enable web-devicons to avoid deprecation warning
+  plugins.web-devicons.enable = true;
+
   plugins.dap = {
     enable = true;
-    extensions = {
-      dap-go = {
-        enable = true;
-        delve.path = "${pkgs.delve}/bin/dlv";
-      };
-      dap-python.enable = true;
-      dap-virtual-text.enable = true;
-      dap-ui = {
-        enable = true;
-        floating.mappings = {
-          close = ["<ESC>" "q"];
-        };
-      };
-    };
     signs = {
       dapBreakpoint = {
         text = "●";
@@ -36,6 +25,22 @@
       };
     };
     # adapters.executables.lldb.command = "lldb-vscode";
+  };
+
+  # Use the new plugin names (no longer under dap.extensions)
+  plugins.dap-go = {
+    enable = true;
+    settings.delve.path = "${pkgs.delve}/bin/dlv";
+  };
+
+  plugins.dap-python.enable = true;
+  plugins.dap-virtual-text.enable = true;
+
+  plugins.dap-ui = {
+    enable = true;
+    settings.floating.mappings = {
+      close = ["<ESC>" "q"];
+    };
   };
 
   # TODO: use codelldb adapter to activate cmake dap config
@@ -66,7 +71,7 @@
        request = "launch",
        program = function()
          -- return vim.fn.input('Path of the executable: ', vim.fn.getcwd() .. '/', 'file')
-          return vim.fn.input('program: ', vim.loop.cwd() .. '/' .. vim.fn.expand('%f'), 'file')
+          return vim.fn.input('program: ', vim.fn.getcwd() .. '/' .. vim.fn.expand('%:t:r'), 'file')
        end,
        cwd = "''${workspaceFolder}",
        terminal = 'integrated',

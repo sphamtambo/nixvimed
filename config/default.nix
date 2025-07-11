@@ -9,7 +9,7 @@
     ./plugins/debug
     ./plugins/file-explorer
     ./plugins/git
-    ./plugins/lsp
+    # ./plugins/lsp
     ./plugins/snippets
     ./plugins/statusline
     ./plugins/fuzzyfinder

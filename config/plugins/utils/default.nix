@@ -5,7 +5,7 @@
     ++ [(import ./dadbod.nix)]
     ++ [(import ./flash.nix)]
     ++ [(import ./grapple.nix)]
-    ++ [(import ./hardtime.nix)]
+    # ++ [(import ./hardtime.nix)]
     # ++ [(import ./harpoon.nix)]
     ++ [(import ./illuminate.nix)]
     ++ [(import ./markdown-preview.nix)]

@@ -4,9 +4,9 @@
     black
     #cmake-format
     #gofumpt
-    golines
-    google-java-format
-    gotools
+    # golines
+    # google-java-format
+    # gotools
     isort
     nodePackages.prettier
     prettierd
@@ -27,11 +27,11 @@
       notify_on_error = true;
 
       formatters_by_ft = {
-        #c = ["clang-format"];
-        #cmake = ["cmake_format"];
-        #cpp = ["clang-format"];
+        # c = ["clang-format"];
+        # cmake = ["cmake_format"];
+        # cpp = ["clang-format"];
         css = [["prettierd" "prettier"]];
-        go = ["goimports" "gofumpt" "golines"];
+        # go = ["goimports" "gofumpt" "golines"];
         html = [["prettierd" "prettier"]];
         java = ["google-java-format"];
         javascript = [["prettierd" "prettier"]];
@@ -41,9 +41,9 @@
         markdown = [["prettierd" "prettier"]];
         nix = ["alejandra"];
         python = [["isort" "black"]];
-        #rust = ["rustfmt"];
-        #sh = ["shfmt"];
-        toml = ["taplo"];
+        rust = ["rustfmt"];
+        # sh = ["shfmt"];
+        # toml = ["taplo"];
         typescript = [["prettierd" "prettier"]];
         typescriptreact = [["prettierd" "prettier"]];
         yaml = [["prettierd" "prettier"]];

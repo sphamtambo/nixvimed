@@ -15,7 +15,7 @@
     ./plugins/fuzzyfinder
     ./plugins/syntax
     ./plugins/terminal
-    #./plugins/test
+    # ./plugins/test
     ./plugins/ui
     ./plugins/utils
   ];

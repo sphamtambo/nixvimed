@@ -8,19 +8,19 @@
       capabilities = "offsetEncoding = 'utf-16'";
       servers = {
         bashls = { enable = true; };
-        #clangd = { enable = true; }; # installed via clang tools
-        #cmake = { enable = true; };
-        #csharp_ls = { enable = true; };
-        cssls = { enable = true; };
+        # clangd = { enable = true; }; # installed via clang tools
+        # cmake = { enable = true; };
+        # csharp_ls = { enable = true; };
+        # cssls = { enable = true; };
         dockerls = { enable = true; };
         emmet_ls = { enable = true; };
         gopls = { enable = true; };
         # graphql = { enable = true; };
-        hls = {
-          enable = true;
-          installGhc = true; # Automatically install GHC with HLS
-          # ghcPackage = "ghc8107"; # Optional: specify GHC version
-        };
+        # hls = {
+        #   enable = true;
+        #   installGhc = true; # Automatically install GHC with HLS
+        #   # ghcPackage = "ghc8107"; # Optional: specify GHC version
+        # };
         html = { enable = true; };
         java_language_server = { enable = true; };
         jsonls = { enable = true; };
@@ -34,21 +34,21 @@
         package = null; 
          };
 
-        rust_analyzer = {
-          enable = true;
-          installCargo = true;
-          installRustc = true;
-          settings = {
-            cargo.features = "all";
-            procMacro = {
-              enable = true;
-            };
-            checkOnSave = true;
-            check = {
-              command = "clippy";
-            };
-          };
-        };
+        # rust_analyzer = {
+        #   enable = true;
+        #   installCargo = true;
+        #   installRustc = true;
+        #   settings = {
+        #     cargo.features = "all";
+        #     procMacro = {
+        #       enable = true;
+        #     };
+        #     checkOnSave = true;
+        #     check = {
+        #       command = "clippy";
+        #     };
+        #   };
+        # };
         svelte = { enable = true; };
         tailwindcss = { enable = true; };
         taplo = { enable = true; };

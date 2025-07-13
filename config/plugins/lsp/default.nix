@@ -1,7 +1,7 @@
 {...}: {
   imports =
     [(import ./conform.nix)]
-    ++ [(import ./cmake-tools.nix)]
+    #++ [(import ./cmake-tools.nix)]
     ++ [(import ./fidget.nix)]
     ++ [(import ./hlchunk.nix)]
     ++ [(import ./lint.nix)]

@@ -8,9 +8,9 @@
       capabilities = "offsetEncoding = 'utf-16'";
       servers = {
         bashls = { enable = true; };
-        clangd = { enable = true; }; # installed via clang tools
-        cmake = { enable = true; };
-        csharp_ls = { enable = true; };
+        #clangd = { enable = true; }; # installed via clang tools
+        #cmake = { enable = true; };
+        #csharp_ls = { enable = true; };
         cssls = { enable = true; };
         dockerls = { enable = true; };
         emmet_ls = { enable = true; };

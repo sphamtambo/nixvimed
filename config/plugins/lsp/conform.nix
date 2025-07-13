@@ -2,16 +2,16 @@
   extraPackages = with pkgs; [
     alejandra
     black
-    cmake-format
-    gofumpt
+    #cmake-format
+    #gofumpt
     golines
     google-java-format
     gotools
     isort
     nodePackages.prettier
     prettierd
-    rustfmt
-    shfmt
+    #rustfmt
+    #shfmt
     stylua
     taplo
   ];
@@ -27,9 +27,9 @@
       notify_on_error = true;
 
       formatters_by_ft = {
-        c = ["clang-format"];
-        cmake = ["cmake_format"];
-        cpp = ["clang-format"];
+        #c = ["clang-format"];
+        #cmake = ["cmake_format"];
+        #cpp = ["clang-format"];
         css = [["prettierd" "prettier"]];
         go = ["goimports" "gofumpt" "golines"];
         html = [["prettierd" "prettier"]];
@@ -41,8 +41,8 @@
         markdown = [["prettierd" "prettier"]];
         nix = ["alejandra"];
         python = [["isort" "black"]];
-        rust = ["rustfmt"];
-        sh = ["shfmt"];
+        #rust = ["rustfmt"];
+        #sh = ["shfmt"];
         toml = ["taplo"];
         typescript = [["prettierd" "prettier"]];
         typescriptreact = [["prettierd" "prettier"]];

@@ -1,32 +1,40 @@
 {
   plugins = {
     lsp-format = {
-      enable = false; # Enable it if you want lsp-format integration for none-ls
+      enable = false; # Enable if you want lsp-format integration for none-ls
     };
     lsp = {
       enable = true;
-      capabilities = "offsetEncoding =  'utf-16'";
+      capabilities = "offsetEncoding = 'utf-16'";
       servers = {
-        bashls = {enable = true;};
-        clangd = {enable = true;}; # installed via clang tools
-        cmake = {enable = true;};
-        csharp-ls = {enable = true;};
-        cssls = {enable = true;};
-        dockerls = {enable = true;};
-        emmet_ls = {enable = true;};
-        gopls = {enable = true;};
-        graphql = {enable = true;};
-        hls = {enable = true;};
-        html = {enable = true;};
-        java-language-server = {enable = true;};
-        jsonls = {enable = true;};
-        lua-ls = {enable = true;};
-        marksman = {enable = true;};
-        nil_ls = {enable = true;};
-        prismals = {enable = true;};
-        pyright = {enable = true;};
-        ruff-lsp = {enable = true;};
-        rust-analyzer = {
+        bashls = { enable = true; };
+        clangd = { enable = true; }; # installed via clang tools
+        cmake = { enable = true; };
+        csharp_ls = { enable = true; };
+        cssls = { enable = true; };
+        dockerls = { enable = true; };
+        emmet_ls = { enable = true; };
+        gopls = { enable = true; };
+        # graphql = { enable = true; };
+        hls = {
+          enable = true;
+          installGhc = true; # Automatically install GHC with HLS
+          # ghcPackage = "ghc8107"; # Optional: specify GHC version
+        };
+        html = { enable = true; };
+        java_language_server = { enable = true; };
+        jsonls = { enable = true; };
+        lua_ls = { enable = true; };
+        marksman = { enable = true; };
+        nil_ls = { enable = true; };
+        # prismals = { enable = true; };
+        pyright = { enable = true; };
+        ruff = {
+        enable = true;
+        package = null; 
+         };
+
+        rust_analyzer = {
           enable = true;
           installCargo = true;
           installRustc = true;
@@ -41,14 +49,13 @@
             };
           };
         };
-        svelte = {enable = true;};
-        # sqls = {enable = true;};
-        tailwindcss = {enable = true;};
-        taplo = {enable = true;};
-        terraformls = {enable = true;};
-        tsserver = {enable = true;};
-        yamlls = {enable = true;};
-        zls = {enable = true;};
+        svelte = { enable = true; };
+        tailwindcss = { enable = true; };
+        taplo = { enable = true; };
+        terraformls = { enable = true; };
+        ts_ls = { enable = true; };
+        yamlls = { enable = true; };
+        zls = { enable = true; };
       };
       keymaps = {
         silent = true;
@@ -89,6 +96,7 @@
             action = "code_action";
             desc = "Code Action";
           };
+          # Uncomment if you want signature help keybinding
           # "<C-k>" = {
           #   action = "signature_help";
           #   desc = "Signature Help";
@@ -143,3 +151,4 @@
     end
   '';
 }
+

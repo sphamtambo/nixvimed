@@ -1,13 +1,46 @@
-{pkgs, ...}: {
-  extraPlugins = [
-    (pkgs.vimUtils.buildVimPlugin {
-      name = "hlchunk";
-      src = pkgs.fetchFromGitHub {
-        owner = "shellRaining";
-        repo = "hlchunk.nvim";
-        rev = "882d1bc86d459fa8884398223c841fd09ea61b6b";
-        hash = "sha256-fvFvV7KAOo7xtOCjhGS5bDUzwd10DndAKs3++dunED8=";
+{
+  plugins.hlchunk = {
+    enable = true;
+    autoLoad = true;
+    settings = {
+      blank = {
+        enable = false;
       };
-    })
-  ];
+      chunk = {
+        chars = {
+          horizontal_line = "─";
+          left_bottom = "╰";
+          left_top = "╭";
+          right_arrow = "─";
+          vertical_line = "│";
+        };
+        enable = true;
+        exclude_filetypes = {
+          lazyterm = true;
+          neo-tree = true;
+        };
+        style = {
+          fg = "#91bef0";
+        };
+        use_treesitter = true;
+      };
+      indent = {
+        chars = [
+          "│"
+        ];
+        exclude_filetypes = {
+          lazyterm = true;
+          neo-tree = true;
+        };
+        style = {
+          fg = "#45475a";
+        };
+        use_treesitter = false;
+      };
+      line_num = {
+        style = "#91bef0";
+        use_treesitter = true;
+      };
+    };
+  };
 }
